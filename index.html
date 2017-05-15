@@ -1,0 +1,31 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+
+function findstring() {
+    var outputDiv = $('#output');
+    var searchText = $('#fulltext').val();
+    var wordMatch = $('#match').val().toLowerCase();
+
+    outputDiv.empty();
+    var m = searchText.match(new RegExp(wordMatch.toString().replace(/(?=[.\\+*?[^\]$(){}\|])/g, "\\"), "ig"));
+    outputDiv.append('<div>' + (m ? m.length : 0) + ' matches</div>');
+}
+  
+</script>
+</head>
+
+
+<body>
+<p>Yo! Put your string in the small text box. <br />
+Your data you want to search for occurances in the large text box and click find.<br />
+</p>
+<textarea rows="50" cols="100" id="fulltext" placeholder="Put your data in here then put your condition in the text box below :)"></textarea>
+<br />
+Match string:
+<input type="text" id="match" value="input your answer here" />
+<br />
+<input type="button" onclick="findstring()" value="Find occurances" />
+<div id="output"></div>
+</body>
+
