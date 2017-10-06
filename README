@@ -1,0 +1,8 @@
+This was created to help a friend solve her problem in Excel.
+
+- Add your text you want to text in the textfield.
+- Input your string you want to search for in the match case field. 
+- Click Find Occurances.
+ Your value will be displayed below.
+ 
+This was working with output data from a Google Form. We had originally set up a multiple selecction question and needed to find the occurances of a answer in multiple submissions. 
